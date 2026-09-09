@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-main: #F8FAFC;
+    --card-main: #FFFFFF;
+    --border-main: #E2E8F0;
+    --text-main: #0F172A;
+  }
+
+  .dark {
+    --bg-main: #121316;
+    --card-main: #1C1E24;
+    --border-main: #2A2D37;
+    --text-main: #F8FAFC;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+  }
+}
+
+/* Custom Utilities for Glassmorphism & Micro Animations */
+.glass-panel {
+  background: rgba(28, 30, 36, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.shadow-glow {
+  box-shadow: 0 0 30px rgba(245, 184, 0, 0.25);
+}
+
+/* Smooth Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #121316;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A2D37;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F5B800;
+}

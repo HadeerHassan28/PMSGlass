@@ -1,0 +1,32 @@
+# Project Rules & Constraints for PMS GLASS Portfolio
+
+## 🛑 Strict File Length Limit
+- **NEVER** write or generate any file exceeding **150 lines of code**.
+- If a component or page approaches 120 lines, immediately break it down into smaller sub-components inside `src/components/ui/` or modular sub-folders.
+- Separate types, mock data, animations, and custom hooks into dedicated files (`src/types/`, `src/data/`, `src/hooks/`).
+
+## 🛠️ Architecture & Tech Stack
+- **Framework:** Next.js (App Router) with TypeScript.
+- **Styling:** Tailwind CSS with dynamic Dark/Light themes (`next-themes`).
+- **Icons:** `lucide-react`.
+- **i18n:** `next-intl` supporting Arabic (`ar`, RTL, Cairo font) and English (`en`, LTR, Inter font).
+- **Navigation:** Always use localized navigation hooks and components from `@/navigation` (e.g., `Link`, `useRouter`, `usePathname`), NEVER standard `next/link`.
+
+## 🎨 Design System & Theme Rules
+- **Dark Mode (Default):** Slate/Charcoal background (`#121316`), glassmorphism cards (`backdrop-blur`), and gold accents (`#F5B800`).
+- **Light Mode:** Off-white background (`#F8FAFC`), crisp dark text, and subtle golden highlights.
+- Always use Tailwind logical spacing classes or `dark:` modifiers for clean theme transitions.
+
+## 📱 Multi-Page Layout Requirements
+Every page must be modularized and follow standard App Router structure:
+- `/` (Home)
+- `/about` (About Us)
+- `/services` (Services Detail)
+- `/projects` (Portfolio Grid)
+- `/projects/[id]` (Single Project View)
+- `/contact` (Contact Form & Map)
+
+## ✍️ Coding Standards
+- Write clean, type-safe TypeScript code.
+- Always use `'use client'` explicitly on interactive components (Language Switcher, Theme Switcher, Lightbox, Mobile Nav Drawer).
+- Do not leave unfinished TODO comments or omitted code blocks.
