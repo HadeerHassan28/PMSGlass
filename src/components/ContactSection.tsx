@@ -49,7 +49,7 @@ export function ContactSection({ locale }: ContactSectionProps) {
             {/* Right Buttons */}
             <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-4">
               <a
-                href="https://wa.me/966500000000"
+                href="https://wa.me/201017905067"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-4 px-6 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm transition-all duration-300 flex items-center justify-center gap-3 shadow-lg hover:shadow-emerald-600/30"
@@ -59,11 +59,11 @@ export function ContactSection({ locale }: ContactSectionProps) {
               </a>
 
               <a
-                href="tel:+966500000000"
+                href="tel:+201017905067"
                 className="w-full py-4 px-6 rounded-2xl bg-pms-gold hover:bg-pms-gold-hover text-black font-bold text-sm transition-all duration-300 flex items-center justify-center gap-3 shadow-lg shadow-pms-gold/20"
               >
                 <PhoneCall className="w-5 h-5" />
-                <span>{isAr ? 'اتصل بنا الآن +966500000000' : 'Call Us Now +966500000000'}</span>
+                <span>{isAr ? 'اتصل بنا الآن 01017905067' : 'Call Us Now 01017905067'}</span>
               </a>
 
               <Link

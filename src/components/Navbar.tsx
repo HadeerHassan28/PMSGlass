@@ -71,7 +71,7 @@ export function Navbar({ locale }: NavbarProps) {
             <LanguageSwitcher locale={locale} />
 
             <a
-              href="tel:+966500000000"
+              href="tel:+201017905067"
               className="flex items-center gap-2 px-4 py-2 rounded-full bg-pms-gold hover:bg-pms-gold-hover text-black font-bold text-xs shadow-gold-glow transition-all duration-300"
             >
               <PhoneCall className="w-3.5 h-3.5" />

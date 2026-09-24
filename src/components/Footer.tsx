@@ -94,12 +94,13 @@ export function Footer({ locale }: FooterProps) {
                 <span>{tContact('addressDesc')}</span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-pms-gold shrink-0" />
-                <a href="tel:+966500000000" className="hover:text-pms-gold dir-ltr">+966 50 000 0000</a>
+                <Phone className="w-4 h-4 text-pms-gold shrink-0 " />
+                <a dir="ltr"
+                href="tel:+201017905067" className="hover:text-pms-gold dir-ltr">+20 101 790 5067</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-pms-gold shrink-0" />
-                <a href="mailto:info@pmsglass.com" className="hover:text-pms-gold">info@pmsglass.com</a>
+                <a  href="mailto:info@pmsglass.com" className="hover:text-pms-gold">info@pmsglass.com</a>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="w-4 h-4 text-pms-gold shrink-0 mt-1" />

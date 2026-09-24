@@ -16,7 +16,7 @@ export function ContactChannels({ t }: ContactChannelsProps) {
         </h3>
 
         <a
-          href="tel:+966500000000"
+          href="tel:+201017905067"
           className="flex items-center gap-4 p-4 rounded-2xl border dark:border-white/10 border-slate-200 dark:bg-white/5 bg-slate-50 hover:border-pms-gold transition-colors"
         >
           <div className="w-10 h-10 rounded-xl bg-pms-gold text-black flex items-center justify-center font-bold">
@@ -24,12 +24,12 @@ export function ContactChannels({ t }: ContactChannelsProps) {
           </div>
           <div>
             <h4 className="font-bold text-sm text-slate-900 dark:text-white">{t('phoneCallTitle')}</h4>
-            <span className="text-xs text-pms-gold font-bold dir-ltr">+966 50 000 0000</span>
+            <span className="text-xs text-pms-gold font-bold dir-ltr">01017905067</span>
           </div>
         </a>
 
         <a
-          href="https://wa.me/966500000000"
+          href="https://wa.me/201017905067"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-4 p-4 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 hover:bg-emerald-500/20 transition-colors"

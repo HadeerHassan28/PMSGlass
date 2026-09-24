@@ -63,7 +63,7 @@ export function MobileNavDrawer({
             </div>
 
             <a
-              href="tel:+966500000000"
+              href="tel:+201017905067"
               className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-pms-gold text-black font-bold text-sm shadow-md"
             >
               <PhoneCall className="w-4 h-4" />
