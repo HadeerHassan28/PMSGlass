@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
-import { ShieldCheck, Target, Eye, Cpu, CheckCircle2, Award, Flame, Wrench } from 'lucide-react';
+import { Target, Eye, Cpu } from 'lucide-react';
 import { ContactSection } from '@/components/ContactSection';
 
 export default function AboutPage({ params: { locale } }: { params: { locale: string } }) {
@@ -33,11 +33,10 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
 
   return (
     <div className="space-y-16 py-12">
-      {/* HEADER BANNER */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-slate-900 text-white overflow-hidden rounded-3xl max-w-7xl mx-auto border dark:border-white/10 border-slate-800">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=1600&q=80"
+            src="/images/about/factory-hero.svg"
             alt="PMS Glass Factory & Engineering"
             fill
             className="object-cover opacity-25"
@@ -58,10 +57,8 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
         </div>
       </section>
 
-      {/* MISSION & VISION */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -95,11 +92,9 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
               {t('visionText')}
             </p>
           </motion.div>
-
         </div>
       </section>
 
-      {/* FACTORY & MACHINERY TECHNOLOGY */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="text-center max-w-2xl mx-auto space-y-3">
           <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white">
@@ -130,7 +125,6 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
         </div>
       </section>
 
-      {/* REUSABLE CONTACT */}
       <ContactSection locale={loc} />
     </div>
   );

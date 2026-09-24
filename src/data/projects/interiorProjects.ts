@@ -31,11 +31,11 @@ export const interiorProjects: Project[] = [
       ar: 'إكسسوارات وهاندريل أسود مطفي مع مفصلات هيدروليكية إيطالية',
       en: 'Matte Black Aluminum Slim Profiles with Italian Hydraulic Hinges'
     },
-    mainImage: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80',
+    mainImage: '/images/projects/partition-1.svg',
     galleryImages: [
-      'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80'
+      '/images/projects/partition-1.svg',
+      '/images/projects/partition-2.svg',
+      '/images/projects/partition-3.svg'
     ],
     description: {
       ar: 'تجهيز كامل للمقر الرئيسي لشركة استثمارية بفواصل زجاجية مودرن، حيث تم تحقيق عزل صوتي عالي لغرف الإدارة والاجتماعات مع دمج نظام الزجاج الذكي المتغير الذي يتحول من شفاف إلى معتم بزر التحكم.',
@@ -97,11 +97,11 @@ export const interiorProjects: Project[] = [
       ar: 'إكسسوارات نحاسية ثقيلة مطلية بالذهب عيار 24 مطفي SS316',
       en: '24K Brushed Gold Plated Solid Brass & Stainless Steel 316'
     },
-    mainImage: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80',
+    mainImage: '/images/projects/shower-1.svg',
     galleryImages: [
-      'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=80'
+      '/images/projects/shower-1.svg',
+      '/images/projects/shower-2.svg',
+      '/images/projects/shower-3.svg'
     ],
     description: {
       ar: 'تصميم وتنفيذ 42 كبينة شاور بمقاسات وأشكال هندسية متعددة لقصر ملكي، تمتاز بخلوها التام من الفريمات المعدنية الظاهرة وتزويدها بإكسسوارات ذهبية فخمة مصنوعة خصيصاً للمشروع.',

@@ -20,10 +20,11 @@ export const railingsAndTemperedServices: Service[] = [
       en: 'Our glass balustrade systems use heavy-duty laminated tempered safety glass (8+8mm or 10+10mm SGP film) engineered to sustain heavy load forces while enhancing architectural elegance.'
     },
     iconName: 'ShieldCheck',
-    mainImage: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80',
+    mainImage: '/images/services/railing-hero.svg',
     gallery: [
-      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'
+      '/images/projects/railing-1.svg',
+      '/images/projects/railing-2.svg',
+      '/images/projects/railing-3.svg'
     ],
     features: {
       ar: [
@@ -81,9 +82,10 @@ export const railingsAndTemperedServices: Service[] = [
       en: 'PMS GLASS produces heat-strengthened tempered glass from 6mm up to 19mm thickness, alongside laminated safety glass fused with high-grade PVB/SGP interlayers preventing shatter dropouts.'
     },
     iconName: 'Flame',
-    mainImage: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80',
+    mainImage: '/images/services/tempered-hero.svg',
     gallery: [
-      'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80'
+      '/images/projects/facade-1.svg',
+      '/images/projects/railing-1.svg'
     ],
     features: {
       ar: [

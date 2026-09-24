@@ -18,7 +18,7 @@ export function HeroSection({ isAr }: HeroSectionProps) {
     <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-12">
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=2000&q=80"
+          src="/images/home/hero-bg.svg"
           alt="Luxury Architectural Glass Facade"
           fill
           priority

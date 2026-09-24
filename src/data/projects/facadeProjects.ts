@@ -31,12 +31,11 @@ export const facadeProjects: Project[] = [
       ar: 'قطاعات ألومنيوم إيطالية عازلة حرارياً مع إكسسوارات ذهبية',
       en: 'Italian Thermally Broken Aluminum Frames with Custom Gold Trims'
     },
-    mainImage: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
+    mainImage: '/images/projects/facade-1.svg',
     galleryImages: [
-      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80'
+      '/images/projects/facade-1.svg',
+      '/images/projects/facade-2.svg',
+      '/images/projects/facade-3.svg'
     ],
     description: {
       ar: 'مشروع تنفيذ واجهات معمارية ستركشر لفيلا مودرن فاخرة بالرياض، تم استخدام زجاج مزدوج عالي الأداء يوفر رؤية بانورامية ساحرة مع خفض تكاليف التكييف بنسبة 40% بفضل طبقات منع الحرارة الشمسية.',
@@ -102,10 +101,11 @@ export const facadeProjects: Project[] = [
       ar: 'قطاعات ألومنيوم ستركشر جلايزنج بدون فواصل معدنية خارجية',
       en: 'Structural Silicone Glazing (SSG) Profiles'
     },
-    mainImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
+    mainImage: '/images/projects/facade-2.svg',
     galleryImages: [
-      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80'
+      '/images/projects/facade-2.svg',
+      '/images/projects/facade-3.svg',
+      '/images/projects/facade-1.svg'
     ],
     description: {
       ar: 'تكسية واجهة برج إداري وتجاري بجدة بـ 6800 متر مربع من الزجاج العاكس، مما أعطى البرج مظهر حداثي فريد وحقق كفاءة طاقة عالية تمثلت في الحصول على شهادة المباني الخضراء.',

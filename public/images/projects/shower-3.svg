@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1C1E24"/>
+      <stop offset="100%" stop-color="#121316"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F5B800"/>
+      <stop offset="100%" stop-color="#FFD700"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.15)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.02)"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bg)"/>
+
+  <!-- Architectural Grid Pattern -->
+  <g stroke="rgba(255,255,255,0.05)" stroke-width="1">
+    <line x1="150" y1="0" x2="150" y2="800"/>
+    <line x1="300" y1="0" x2="300" y2="800"/>
+    <line x1="450" y1="0" x2="450" y2="800"/>
+    <line x1="600" y1="0" x2="600" y2="800"/>
+    <line x1="750" y1="0" x2="750" y2="800"/>
+    <line x1="900" y1="0" x2="900" y2="800"/>
+    <line x1="1050" y1="0" x2="1050" y2="800"/>
+
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+    <line x1="0" y1="600" x2="1200" y2="600"/>
+    <line x1="0" y1="750" x2="1200" y2="750"/>
+  </g>
+
+  <!-- Glass Structure Mockup Shapes -->
+  <polygon points="200,100 1000,100 900,700 300,700" fill="url(#glass)" stroke="url(#gold)" stroke-width="2"/>
+  <polygon points="350,150 850,150 780,650 420,650" fill="rgba(245, 184, 0, 0.04)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+
+  <!-- Reflection Lines -->
+  <line x1="250" y1="200" x2="550" y2="650" stroke="rgba(255,255,255,0.2)" stroke-width="3" stroke-dasharray="10 15"/>
+  <line x1="400" y1="180" x2="700" y2="630" stroke="rgba(245, 184, 0, 0.3)" stroke-width="2"/>
+
+  <!-- Label Badge -->
+  <rect x="80" y="80" width="320" height="48" rx="24" fill="rgba(0,0,0,0.6)" stroke="#F5B800" stroke-width="1.5"/>
+  <text x="240" y="110" font-family="Inter, Cairo, sans-serif" font-size="16" font-weight="bold" fill="#F5B800" text-anchor="middle" letter-spacing="2">PMS GLASS • SHOWERS</text>
+
+  <!-- Title Text -->
+  <text x="600" y="740" font-family="Inter, Cairo, sans-serif" font-size="28" font-weight="800" fill="#FFFFFF" text-anchor="middle">Hydrophobic Nano Glass Enclosure</text>
+</svg>

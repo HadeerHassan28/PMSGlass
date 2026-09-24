@@ -20,11 +20,11 @@ export const facadeServices: Service[] = [
       en: 'PMS GLASS delivers integrated curtain wall, structural glazing, and spider system facades equipped with double glazing, Low-E solar control, and crystal-clear extra-clear low-iron glass.'
     },
     iconName: 'Building2',
-    mainImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
+    mainImage: '/images/services/facade-hero.svg',
     gallery: [
-      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=800&q=80'
+      '/images/projects/facade-1.svg',
+      '/images/projects/facade-2.svg',
+      '/images/projects/facade-3.svg'
     ],
     features: {
       ar: [

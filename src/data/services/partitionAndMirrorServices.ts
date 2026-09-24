@@ -20,10 +20,11 @@ export const partitionAndMirrorServices: Service[] = [
       en: 'We install premium modular office partitions engineered for noise isolation and architectural flexibility. Featuring ultra-slim profile framing and optional switchable smart privacy glass.'
     },
     iconName: 'LayoutGrid',
-    mainImage: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80',
+    mainImage: '/images/services/partition-hero.svg',
     gallery: [
-      'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80'
+      '/images/projects/partition-1.svg',
+      '/images/projects/partition-2.svg',
+      '/images/projects/partition-3.svg'
     ],
     features: {
       ar: [
@@ -81,10 +82,11 @@ export const partitionAndMirrorServices: Service[] = [
       en: 'We craft copper-free Belgian mirrors that resist humidity, tarnish, and moisture degradation. Custom integrated with front and backlit LEDs, touch controls, and anti-fog heating pads.'
     },
     iconName: 'Sparkles',
-    mainImage: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80',
+    mainImage: '/images/services/mirror-hero.svg',
     gallery: [
-      'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80'
+      '/images/projects/mirror-1.svg',
+      '/images/projects/mirror-2.svg',
+      '/images/projects/mirror-3.svg'
     ],
     features: {
       ar: [

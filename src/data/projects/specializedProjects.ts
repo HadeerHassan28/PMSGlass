@@ -31,10 +31,11 @@ export const specializedProjects: Project[] = [
       ar: 'مجرى ألومنيوم مدفون بالأرضية مع هاندريل إستانلس ستيل رفيع',
       en: 'Concealed Heavy Aluminum Base Shoe with Micro SS Top Rail'
     },
-    mainImage: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80',
+    mainImage: '/images/projects/railing-1.svg',
     galleryImages: [
-      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80'
+      '/images/projects/railing-1.svg',
+      '/images/projects/railing-2.svg',
+      '/images/projects/railing-3.svg'
     ],
     description: {
       ar: 'تنفيذ دربزينات زجاجية للشرفات والسطح في مشروع مجمع مكاتب وفلل سكنية. يعتمد النظام على زجاج مصفح عالي الأمان مثبت من الأسفل في قطاع مدفون داخل الخرسانة ليظهر الزجاج فقط بشكل ساحر.',
@@ -43,7 +44,7 @@ export const specializedProjects: Project[] = [
     scopeOfWork: {
       ar: [
         'زرع قطاعات الألومنيوم الهيكلية في الخرسانة قبل التبليد',
-        'تركيب الزجاج المصفح وااختبار قوة تحمل الصدمات الجانبية',
+        'تركيب الزجاج المصفح واختبار قوة تحمل الصدمات الجانبية',
         'تزويد الزجاج بهاندريل إستانلس رفيع جداً لحماية الأطراف العلوي'
       ],
       en: [
@@ -94,10 +95,11 @@ export const specializedProjects: Project[] = [
       ar: 'إطار خلفي ألومنيوم مخفي مع شريط LED IP65 وسمارت تشير',
       en: 'Concealed Aluminum Subframe with IP65 Waterproof Touch Control Strip'
     },
-    mainImage: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80',
+    mainImage: '/images/projects/mirror-1.svg',
     galleryImages: [
-      'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80'
+      '/images/projects/mirror-1.svg',
+      '/images/projects/mirror-2.svg',
+      '/images/projects/mirror-3.svg'
     ],
     description: {
       ar: 'تصنيع وتركيب 180 مرآة ديكورية فاخرة لأجنحة ومغاسل وردهات فندق 5 نجوم بالخبر، تم تزويدها بخاصية تسخين إزالة الضباب وإضاءة LED محيطية ذات درجات ألوان دافئة.',

@@ -8,6 +8,7 @@ import { Menu, X, PhoneCall } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { MobileNavDrawer } from './MobileNavDrawer';
+import Image from 'next/image';
 
 interface NavbarProps {
   locale: 'ar' | 'en';
@@ -34,17 +35,7 @@ export function Navbar({ locale }: NavbarProps) {
           
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-pms-gold to-amber-600 flex items-center justify-center text-black font-extrabold text-xl shadow-gold-glow">
-              P
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-extrabold tracking-wider text-slate-900 dark:text-white group-hover:text-pms-gold transition-colors">
-                PMS <span className="text-pms-gold">GLASS</span>
-              </span>
-              <span className="text-[10px] text-slate-500 dark:text-gray-400 -mt-1 font-semibold uppercase tracking-widest">
-                {isAr ? 'الحلول المعمارية للزجاج' : 'Architectural Glass'}
-              </span>
-            </div>
+           <Image src="/images/logo.png" alt="Logo" width={50} height={50} />
           </Link>
 
           {/* Desktop Nav Links */}

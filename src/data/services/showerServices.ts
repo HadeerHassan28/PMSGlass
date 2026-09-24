@@ -20,11 +20,11 @@ export const showerServices: Service[] = [
       en: 'Our custom shower enclosures feature hydrophobic Easy-Clean nano coatings, shatter-proof safety glass, and luxury hardware finishes including brushed gold, matte black, mirror chrome, and champagne bronze.'
     },
     iconName: 'ShowerHead',
-    mainImage: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80',
+    mainImage: '/images/services/shower-hero.svg',
     gallery: [
-      'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=800&q=80'
+      '/images/projects/shower-1.svg',
+      '/images/projects/shower-2.svg',
+      '/images/projects/shower-3.svg'
     ],
     features: {
       ar: [

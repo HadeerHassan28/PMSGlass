@@ -25,6 +25,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'PMS GLASS | Specialized Architectural Glass & Aluminum Solutions',
   description: 'Tempered glass, structural glass facades, luxury shower enclosures, glass railings, interior partitions, and bespoke LED mirrors.',
+  icons: {
+    icon: '/images/logo.png',
+    shortcut: '/images/logo.png',
+    apple: '/images/logo.png',
+  },
 };
 
 const locales = ['ar', 'en'];
