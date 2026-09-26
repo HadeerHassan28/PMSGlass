@@ -100,7 +100,7 @@ export function Footer({ locale }: FooterProps) {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-pms-gold shrink-0" />
-                <a  href="mailto:info@pmsglass.com" className="hover:text-pms-gold">info@pmsglass.com</a>
+                <a href="mailto:info@pmsglass.com" className="hover:text-pms-gold">info@pmsglass.com</a>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="w-4 h-4 text-pms-gold shrink-0 mt-1" />
