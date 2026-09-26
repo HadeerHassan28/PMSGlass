@@ -78,8 +78,7 @@ export function ServiceCard({ service, locale }: ServiceCardProps) {
       <div className="p-6 pt-0">
         <Link
           href="/services"
-          className="w-full py-3 px-4 rounded-xl border border-pms-gold/40 text-pms-gold dark:bg-white/5 bg-slate-50 hover:bg-pms-gold hover:text-black font-bold text-xs transition-all duration-300 flex items-center justify-center gap-2 group/btn shadow-sm"
-        >
+className="w-full py-3 px-4 rounded-xl border border-pms-gold/40 text-pms-gold dark:bg-white/5 bg-slate-50 hover:bg-pms-gold hover:text-slate-900 dark:hover:text-white font-bold text-xs transition-all duration-300 flex items-center justify-center gap-2 group/btn shadow-sm"        >
           <span>{isAr ? 'عرض المواصفات كاملة' : 'View Full Specifications'}</span>
           {isAr ? (
             <ArrowLeft className="w-4 h-4 transition-transform group-hover/btn:-translate-x-1" />
