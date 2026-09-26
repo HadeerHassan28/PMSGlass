@@ -2,7 +2,8 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Send, CheckCircle2, Mail } from 'lucide-react';
+import { Send, CheckCircle2, AlertCircle, Loader2, Mail } from 'lucide-react';
+import { ContactFormFields } from './ContactFormFields';
 
 interface ContactFormProps {
   isAr: boolean;
@@ -18,24 +19,36 @@ export function ContactForm({ isAr, t }: ContactFormProps) {
     message: '',
   });
 
+  const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.phone) return;
 
-    const text = isAr
-      ? `📌 *طلب جديد (PMS GLASS)*\n👤 *الاسم:* ${formData.name}\n📞 *الهاتف:* ${formData.phone}\n` +
-        (formData.email ? `✉️ *البريد:* ${formData.email}\n` : '') +
-        (formData.serviceNeeded ? `🛠️ *الخدمة:* ${formData.serviceNeeded}\n` : '') +
-        (formData.message ? `📝 *التفاصيل:* ${formData.message}` : '')
-      : `📌 *New Inquiry (PMS GLASS)*\n👤 *Name:* ${formData.name}\n📞 *Phone:* ${formData.phone}\n` +
-        (formData.email ? `✉️ *Email:* ${formData.email}\n` : '') +
-        (formData.serviceNeeded ? `🛠️ *Service:* ${formData.serviceNeeded}\n` : '') +
-        (formData.message ? `📝 *Message:* ${formData.message}` : '');
+    setLoading(true);
+    setErrorMsg(null);
 
-    window.open(`https://wa.me/201017905067?text=${encodeURIComponent(text)}`, '_blank');
-    setSubmitted(true);
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await res.json();
+
+      if (res.ok && result.success) {
+        setSubmitted(true);
+      } else {
+        setErrorMsg(result.error || (isAr ? 'حدث خطأ أثناء الإرسال' : 'Failed to send message'));
+      }
+    } catch (err: any) {
+      setErrorMsg(isAr ? 'عذراً، يتعذر الاتصال بالخادم' : 'Network error. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -58,88 +71,27 @@ export function ContactForm({ isAr, t }: ContactFormProps) {
         </motion.div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-5">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="space-y-1.5">
-              <label className="text-xs font-bold text-slate-700 dark:text-gray-300">
-                {t('name')} *
-              </label>
-              <input
-                type="text"
-                required
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                placeholder={t('namePlaceholder')}
-                className="w-full py-3 px-4 rounded-xl border dark:border-white/15 border-slate-300 dark:bg-white/5 bg-slate-50 text-slate-900 dark:text-white text-xs focus:outline-none focus:border-pms-gold"
-              />
+          {errorMsg && (
+            <div className="p-4 rounded-xl bg-red-500/10 border border-red-500/30 text-red-500 text-xs flex items-center gap-2">
+              <AlertCircle className="w-4 h-4 shrink-0" />
+              <span>{errorMsg}</span>
             </div>
+          )}
 
-            <div className="space-y-1.5">
-              <label className="text-xs font-bold text-slate-700 dark:text-gray-300">
-                {t('phone')} *
-              </label>
-              <input
-                type="tel"
-                required
-                value={formData.phone}
-                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                placeholder={t('phonePlaceholder')}
-                className="w-full py-3 px-4 rounded-xl border dark:border-white/15 border-slate-300 dark:bg-white/5 bg-slate-50 text-slate-900 dark:text-white text-xs focus:outline-none focus:border-pms-gold"
-              />
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="space-y-1.5">
-              <label className="text-xs font-bold text-slate-700 dark:text-gray-300">
-                {t('email')}
-              </label>
-              <input
-                type="email"
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                placeholder={t('emailPlaceholder')}
-                className="w-full py-3 px-4 rounded-xl border dark:border-white/15 border-slate-300 dark:bg-white/5 bg-slate-50 text-slate-900 dark:text-white text-xs focus:outline-none focus:border-pms-gold"
-              />
-            </div>
-
-            <div className="space-y-1.5">
-              <label className="text-xs font-bold text-slate-700 dark:text-gray-300">
-                {t('serviceNeeded')}
-              </label>
-              <select
-                value={formData.serviceNeeded}
-                onChange={(e) => setFormData({ ...formData, serviceNeeded: e.target.value })}
-                className="w-full py-3 px-4 rounded-xl border dark:border-white/15 border-slate-300 dark:bg-white/5 bg-slate-50 text-slate-900 dark:text-white text-xs focus:outline-none focus:border-pms-gold"
-              >
-                <option value="">{t('selectService')}</option>
-                <option value="facades">{isAr ? 'الواجهات الزجاجية' : 'Glass Facades'}</option>
-                <option value="showers">{isAr ? 'كبائن الشاور' : 'Shower Cabins'}</option>
-                <option value="railings">{isAr ? 'الدربزينات الزجاجية' : 'Glass Railings'}</option>
-                <option value="partitions">{isAr ? 'الفواصل المكتبية' : 'Office Partitions'}</option>
-                <option value="mirrors">{isAr ? 'المرايا الديكورية' : 'Custom Mirrors'}</option>
-              </select>
-            </div>
-          </div>
-
-          <div className="space-y-1.5">
-            <label className="text-xs font-bold text-slate-700 dark:text-gray-300">
-              {t('message')}
-            </label>
-            <textarea
-              rows={4}
-              value={formData.message}
-              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              placeholder={t('messagePlaceholder')}
-              className="w-full py-3 px-4 rounded-xl border dark:border-white/15 border-slate-300 dark:bg-white/5 bg-slate-50 text-slate-900 dark:text-white text-xs focus:outline-none focus:border-pms-gold"
-            />
-          </div>
+          <ContactFormFields
+            formData={formData}
+            setFormData={setFormData}
+            isAr={isAr}
+            t={t}
+          />
 
           <button
             type="submit"
-            className="w-full py-4 rounded-xl bg-pms-gold hover:bg-pms-gold-hover text-black font-extrabold text-sm shadow-gold-glow transition-all flex items-center justify-center gap-2"
+            disabled={loading}
+            className="w-full py-4 rounded-xl bg-pms-gold hover:bg-pms-gold-hover text-black font-extrabold text-sm shadow-gold-glow transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            <Send className="w-4 h-4" />
-            <span>{t('send')}</span>
+            {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
+            <span>{loading ? (isAr ? 'جاري الإرسال...' : 'Sending...') : t('send')}</span>
           </button>
         </form>
       )}
