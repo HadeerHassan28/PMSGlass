@@ -23,6 +23,18 @@ export function ContactForm({ isAr, t }: ContactFormProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.phone) return;
+
+    const text = isAr
+      ? `📌 *طلب جديد (PMS GLASS)*\n👤 *الاسم:* ${formData.name}\n📞 *الهاتف:* ${formData.phone}\n` +
+        (formData.email ? `✉️ *البريد:* ${formData.email}\n` : '') +
+        (formData.serviceNeeded ? `🛠️ *الخدمة:* ${formData.serviceNeeded}\n` : '') +
+        (formData.message ? `📝 *التفاصيل:* ${formData.message}` : '')
+      : `📌 *New Inquiry (PMS GLASS)*\n👤 *Name:* ${formData.name}\n📞 *Phone:* ${formData.phone}\n` +
+        (formData.email ? `✉️ *Email:* ${formData.email}\n` : '') +
+        (formData.serviceNeeded ? `🛠️ *Service:* ${formData.serviceNeeded}\n` : '') +
+        (formData.message ? `📝 *Message:* ${formData.message}` : '');
+
+    window.open(`https://wa.me/201017905067?text=${encodeURIComponent(text)}`, '_blank');
     setSubmitted(true);
   };
 

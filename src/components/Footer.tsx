@@ -100,7 +100,7 @@ export function Footer({ locale }: FooterProps) {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-pms-gold shrink-0" />
-                <a href="mailto:info@pmsglass.com" className="hover:text-pms-gold">info@pmsglass.com</a>
+                <a href="mailto:" className="hover:text-pms-gold">info@pmsglass.com</a>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="w-4 h-4 text-pms-gold shrink-0 mt-1" />
@@ -114,9 +114,14 @@ export function Footer({ locale }: FooterProps) {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
           <p>{t('rights')}</p>
-          <div className="flex items-center gap-6">
-            <span className="hover:text-gray-400 cursor-pointer">{isAr ? 'الشروط والأحكام' : 'Terms & Conditions'}</span>
-            <span className="hover:text-gray-400 cursor-pointer">{isAr ? 'سياسة الخصوصية' : 'Privacy Policy'}</span>
+          <div className="flex items-center gap-2">
+            {/* <span className="hover:text-gray-400 cursor-pointer">{isAr ? 'الشروط والأحكام' : 'Terms & Conditions'}</span>
+            <span className="hover:text-gray-400 cursor-pointer">{isAr ? 'سياسة الخصوصية' : 'Privacy Policy'}</span> */}
+            <span className="">{t('rights2')}</span>
+            <Link 
+            target="_blank" 
+  rel="noopener noreferrer"
+            href={"https://new-portfolio-awyy.vercel.app/"} className="hover:text-gray-400 cursor-pointer underline underline-offset-2">{t('rights2Name')}</Link>
           </div>
         </div>
       </div>
