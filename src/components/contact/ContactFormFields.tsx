@@ -78,6 +78,7 @@ export function ContactFormFields({ formData, setFormData, isAr, t }: ContactFor
             <option value="railings">{isAr ? 'الدربزينات الزجاجية' : 'Glass Railings'}</option>
             <option value="partitions">{isAr ? 'الفواصل المكتبية' : 'Office Partitions'}</option>
             <option value="mirrors">{isAr ? 'المرايا الديكورية' : 'Custom Mirrors'}</option>
+            <option value="elevator">{isAr ? 'تقفيل أسانسير' : 'Elevator Glass'}</option>
           </select>
         </div>
       </div>
