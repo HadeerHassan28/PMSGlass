@@ -62,17 +62,7 @@ export function ContactChannels({ t }: ContactChannelsProps) {
         </div>
       </div>
 
-      <div className="relative h-48 rounded-3xl overflow-hidden border dark:border-white/10 border-slate-200 shadow-md">
-        <iframe
-          title="PMS GLASS Location Map"
-          src='https://www.google.com/maps/search/?api=1&query=1+Lamar+Street+Al+Qanal+Market+Gesr+El+Suez+Joseph+Tito+Cairo'
-          width="100%"
-          height="100%"
-          style={{ border: 0, filter: 'contrast(1.2) opacity(0.85)' }}
-          allowFullScreen={false}
-          loading="lazy"
-        />
-      </div>
+     
     </div>
   );
 }
