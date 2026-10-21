@@ -1,0 +1,74 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="award_bg" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0F1012" />
+      <stop offset="50%" stop-color="#181A20" />
+      <stop offset="100%" stop-color="#0B0C0E" />
+    </linearGradient>
+    <linearGradient id="gold_grad" x1="200" y1="100" x2="600" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFE885" />
+      <stop offset="50%" stop-color="#F5B800" />
+      <stop offset="100%" stop-color="#B88600" />
+    </linearGradient>
+    <linearGradient id="glass_shield" x1="250" y1="120" x2="550" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.18" />
+      <stop offset="50%" stop-color="#F5B800" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.4" />
+    </linearGradient>
+    <filter id="glow" x="200" y="80" width="400" height="440" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="24" result="blur" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#award_bg)" />
+
+  <!-- Background decorative grid & architectural lines -->
+  <g opacity="0.15" stroke="#F5B800" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="600" />
+    <line x1="200" y1="0" x2="200" y2="600" />
+    <line x1="300" y1="0" x2="300" y2="600" />
+    <line x1="400" y1="0" x2="400" y2="600" />
+    <line x1="500" y1="0" x2="500" y2="600" />
+    <line x1="600" y1="0" x2="600" y2="600" />
+    <line x1="700" y1="0" x2="700" y2="600" />
+    <line x1="0" y1="100" x2="800" y2="100" />
+    <line x1="0" y1="200" x2="800" y2="200" />
+    <line x1="0" y1="300" x2="800" y2="300" />
+    <line x1="0" y1="400" x2="800" y2="400" />
+    <line x1="0" y1="500" x2="800" y2="500" />
+  </g>
+
+  <!-- Ambient Gold Glow -->
+  <circle cx="400" cy="280" r="140" fill="#F5B800" opacity="0.12" filter="url(#glow)" />
+
+  <!-- Outer Glass Shield Frame -->
+  <path d="M400 110 L560 170 V320 C560 410 490 470 400 500 C310 470 240 410 240 320 V170 Z" 
+        fill="url(#glass_shield)" 
+        stroke="url(#gold_grad)" 
+        stroke-width="3" />
+
+  <!-- Inner Geometric Bevel -->
+  <path d="M400 135 L535 185 V315 C535 390 475 445 400 470 C325 445 265 390 265 315 V185 Z" 
+        fill="none" 
+        stroke="#F5B800" 
+        stroke-width="1.5" 
+        stroke-opacity="0.4" 
+        stroke-dasharray="6 4" />
+
+  <!-- Laurels / Wreath Icon Symbol -->
+  <g transform="translate(400, 260) scale(1.1)">
+    <!-- Trophy Star -->
+    <path d="M0 -50 L7 -33 L25 -33 L11 -21 L16 -3 L0 -14 L-16 -3 L-11 -21 L-25 -33 L-7 -33 Z" fill="url(#gold_grad)" />
+    <!-- Architectural Facade Icon -->
+    <rect x="-35" y="0" width="70" height="60" rx="4" fill="none" stroke="url(#gold_grad)" stroke-width="2.5" />
+    <line x1="-35" y1="20" x2="35" y2="20" stroke="url(#gold_grad)" stroke-width="1.5" />
+    <line x1="-35" y1="40" x2="35" y2="40" stroke="url(#gold_grad)" stroke-width="1.5" />
+    <line x1="-12" y1="0" x2="-12" y2="60" stroke="url(#gold_grad)" stroke-width="1.5" />
+    <line x1="12" y1="0" x2="12" y2="60" stroke="url(#gold_grad)" stroke-width="1.5" />
+  </g>
+
+  <!-- Plaque Text -->
+  <text x="400" y="375" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-weight="800" font-size="20" letter-spacing="3">PMS GLASS</text>
+  <text x="400" y="405" text-anchor="middle" fill="#F5B800" font-family="system-ui, sans-serif" font-weight="600" font-size="14" letter-spacing="1.5">TEXTILE MALL FACADE AWARD</text>
+  <text x="400" y="430" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-weight="500" font-size="12">ARCHITECTURAL EXCELLENCE &amp; SAFETY</text>
+</svg>
