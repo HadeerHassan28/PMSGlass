@@ -37,10 +37,10 @@ export function FooterContactInfo({
         <li className="flex items-center gap-3">
           <Mail className="w-4 h-4 text-pms-gold shrink-0" />
           <a
-            href="mailto:MahmedSalama88@gmail.com"
+            href="mailto:pmsglassinfo@gmail.com"
             className="hover:text-pms-gold"
           >
-            MahmedSalama88@gmail.com
+            pmsglassinfo@gmail.com
           </a>
         </li>
         <li className="flex items-start gap-3">
