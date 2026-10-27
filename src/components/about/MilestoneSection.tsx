@@ -40,10 +40,10 @@ export function MilestoneSection({
           <div className="lg:col-span-5 relative">
             <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden border border-pms-gold/40 shadow-xl bg-slate-900 group">
               <Image
-                src="/images/about/award-placeholder.svg"
+                src="/images/about/prize.jpeg"
                 alt={title}
                 fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                className="object-scale-down transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-slate-900/80 border border-pms-gold/40 text-pms-gold text-xs font-bold flex items-center gap-1.5 backdrop-blur-md">
                 <Award className="w-3.5 h-3.5" />

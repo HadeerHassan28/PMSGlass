@@ -27,19 +27,19 @@ interface SocialItem {
 const socialChannels: SocialItem[] = [
   {
     name: 'Facebook',
-    href: 'https://facebook.com',
+    href: 'https://www.facebook.com/share/1F2YRjqCEC/?mibextid=wwXIfr',
     ariaLabel: 'Visit PMS GLASS on Facebook',
     icon: Facebook,
   },
   {
     name: 'TikTok',
-    href: 'https://tiktok.com',
+    href: 'https://www.tiktok.com/@pmsglass?_r=1&_t=ZS-9AuCTCEl8GC',
     ariaLabel: 'Visit PMS GLASS on TikTok',
     icon: TikTokIcon,
   },
   {
     name: 'Instagram',
-    href: 'https://instagram.com',
+    href: 'https://www.instagram.com/pmsglass?exln=MW56ODV2ajl1bmRkbg==',
     ariaLabel: 'Visit PMS GLASS on Instagram',
     icon: Instagram,
   },
