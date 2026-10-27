@@ -25,12 +25,13 @@ export function Footer({ locale }: FooterProps) {
   ];
 
   const services = [
-    isAr ? 'الواجهات الزجاجية (Curtain Walls)' : 'Curtain Wall Facades',
-    isAr ? 'كبائن الشاور الفاخرة' : 'Luxury Shower Cabins',
-    isAr ? ' هاندريل الزجاج' : 'Structural Glass Railings',
-    isAr ? 'القواطع المكتبيّة المعزولة' : 'Acoustic Office Partitions',
-    isAr ? 'المرايا الديكورية والـ LED' : 'Custom & LED Mirrors',
-    isAr ? 'تقفيل أسانسير' : 'Elevator Glass',
+    isAr ? 'واجهات زجاجية (محلات، مولات، أبواب)' : 'Glass Facades (Stores, Malls, Doors)',
+    isAr ? 'هاندريل زجاجي' : 'Glass Handrails',
+    isAr ? 'مرايات' : 'Mirrors',
+    isAr ? 'برجولات زجاجية' : 'Glass Pergolas',
+    isAr ? 'مرايات ديكور' : 'Decorative Mirrors',
+    isAr ? 'كبائن شاور' : 'Shower Cabins',
+    isAr ? 'إكسسوارات زجاج' : 'Glass Accessories & Hardware',
   ];
 
   return (

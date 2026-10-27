@@ -1,10 +1,12 @@
 import { Project } from '../types';
-import { facadeProjects } from './projects/facadeProjects';
-import { interiorProjects } from './projects/interiorProjects';
-import { specializedProjects } from './projects/specializedProjects';
+import { mallsProjects } from './projects/mallsProjects';
+import { retailProjects } from './projects/retailProjects';
+import { villasProjects } from './projects/villasProjects';
+import { apartmentsProjects } from './projects/apartmentsProjects';
 
 export const projectsData: Project[] = [
-  ...facadeProjects,
-  ...interiorProjects,
-  ...specializedProjects,
+  ...mallsProjects,
+  ...retailProjects,
+  ...villasProjects,
+  ...apartmentsProjects,
 ];

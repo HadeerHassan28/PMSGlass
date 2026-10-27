@@ -22,7 +22,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
   const isAr = locale === 'ar';
   const loc = locale as 'ar' | 'en';
 
-  const featuredProjects = projectsData.filter((p) => p.featured).slice(0, 3);
+  const featuredProjects = projectsData.filter((p) => p.featured).slice(0, 4);
 
   const stats = [
     { value: t('stat1Value'), label: t('stat1Label') },
@@ -58,7 +58,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {servicesData.slice(0, 6).map((service) => (
+          {servicesData.map((service) => (
             <ServiceCard key={service.id} service={service} locale={loc} />
           ))}
         </div>
@@ -88,7 +88,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {featuredProjects.map((project) => (
             <ProjectCard key={project.id} project={project} locale={loc} />
           ))}

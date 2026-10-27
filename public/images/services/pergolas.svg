@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#15171C"/>
+      <stop offset="50%" stop-color="#101114"/>
+      <stop offset="100%" stop-color="#0A0B0D"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F5B800"/>
+      <stop offset="100%" stop-color="#FFDE6A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.08)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.01)"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#bg)"/>
+
+  <!-- Background decorative grid -->
+  <g stroke="rgba(245,184,0,0.08)" stroke-width="1">
+    <line x1="150" y1="0" x2="150" y2="800"/>
+    <line x1="300" y1="0" x2="300" y2="800"/>
+    <line x1="450" y1="0" x2="450" y2="800"/>
+    <line x1="600" y1="0" x2="600" y2="800"/>
+    <line x1="750" y1="0" x2="750" y2="800"/>
+    <line x1="900" y1="0" x2="900" y2="800"/>
+    <line x1="1050" y1="0" x2="1050" y2="800"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="600" x2="1200" y2="600"/>
+  </g>
+
+  <!-- Ambient Golden Glow -->
+  <circle cx="600" cy="380" r="220" fill="#F5B800" opacity="0.06"/>
+
+  <!-- Center Card Backdrop -->
+  <rect x="250" y="140" width="700" height="480" rx="24" fill="url(#cardGrad)" stroke="#F5B800" stroke-width="1.5" stroke-opacity="0.3"/>
+
+  <!-- Icon Graphic -->
+  
+      <line x1="380" y1="260" x2="820" y2="260" stroke="#F5B800" stroke-width="6"/>
+      <line x1="420" y1="260" x2="420" y2="560" stroke="#F5B800" stroke-width="4"/>
+      <line x1="780" y1="260" x2="780" y2="560" stroke="#F5B800" stroke-width="4"/>
+      <polygon points="400,260 800,260 760,340 440,340" fill="rgba(245,184,0,0.15)" stroke="#F5B800" stroke-width="2"/>
+    
+
+  <!-- Header Badge -->
+  <rect x="420" y="70" width="360" height="42" rx="21" fill="rgba(0,0,0,0.7)" stroke="#F5B800" stroke-width="1.5"/>
+  <text x="600" y="97" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#F5B800" text-anchor="middle" letter-spacing="2">PMS GLASS • SERVICES</text>
+
+  <!-- Title Bottom -->
+  <text x="600" y="690" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="800" fill="#FFFFFF" text-anchor="middle">Glass Pergolas & Canopies</text>
+  <text x="600" y="725" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#94A3B8" text-anchor="middle">Luxury Architectural Glass &amp; Aluminum Solutions</text>
+</svg>

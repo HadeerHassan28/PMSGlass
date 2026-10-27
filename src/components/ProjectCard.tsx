@@ -7,6 +7,13 @@ import { motion } from 'framer-motion';
 import { ArrowUpRight, MapPin, Calendar } from 'lucide-react';
 import { Project } from '@/types';
 
+const categoryLabels: Record<string, { ar: string; en: string }> = {
+  malls: { ar: 'مولات تجارية', en: 'Commercial Malls' },
+  retail: { ar: 'محلات تجارية', en: 'Retail Stores' },
+  villas: { ar: 'فيلات سكنية', en: 'Luxury Villas' },
+  apartments: { ar: 'شقق سكنية', en: 'Residential Apartments' },
+};
+
 interface ProjectCardProps {
   project: Project;
   locale: 'ar' | 'en';
@@ -14,6 +21,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, locale }: ProjectCardProps) {
   const isAr = locale === 'ar';
+  const categoryLabel = categoryLabels[project.category]?.[locale] || project.category;
 
   return (
     <motion.div
@@ -38,7 +46,7 @@ export function ProjectCard({ project, locale }: ProjectCardProps) {
         {/* Category Tag */}
         <div className="absolute top-4 left-4 right-4 flex justify-between items-center">
           <span className="px-3.5 py-1 rounded-full text-xs font-bold bg-pms-gold text-black shadow-md uppercase tracking-wider">
-            {project.category}
+            {categoryLabel}
           </span>
           <span className="px-3 py-1 rounded-full text-xs font-medium bg-black/60 backdrop-blur-md text-white border border-white/20 flex items-center gap-1">
             <Calendar className="w-3 h-3 text-pms-gold" />

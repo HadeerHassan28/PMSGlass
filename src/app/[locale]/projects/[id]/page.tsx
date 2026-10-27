@@ -12,6 +12,13 @@ import { ContactSection } from '@/components/ContactSection';
 import { ProjectMetaBar } from '@/components/projects/ProjectMetaBar';
 import { ProjectScopeAndSpecs } from '@/components/projects/ProjectScopeAndSpecs';
 
+const categoryLabels: Record<string, { ar: string; en: string }> = {
+  malls: { ar: 'مولات تجارية', en: 'Commercial Malls' },
+  retail: { ar: 'محلات تجارية', en: 'Retail Stores' },
+  villas: { ar: 'فيلات سكنية', en: 'Luxury Villas' },
+  apartments: { ar: 'شقق سكنية', en: 'Residential Apartments' },
+};
+
 export default function SingleProjectPage({
   params: { locale, id },
 }: {
@@ -34,6 +41,7 @@ export default function SingleProjectPage({
     );
   }
 
+  const categoryLabel = categoryLabels[project.category]?.[loc] || project.category;
   const relatedProjects = projectsData.filter((p) => p.id !== project.id && p.category === project.category).slice(0, 2);
 
   return (
@@ -52,7 +60,7 @@ export default function SingleProjectPage({
         <div className="space-y-4">
           <div className="flex items-center gap-3">
             <span className="px-3.5 py-1 rounded-full text-xs font-bold bg-pms-gold text-black uppercase tracking-wider">
-              {project.category}
+              {categoryLabel}
             </span>
             <span className="text-xs font-semibold text-slate-500 dark:text-gray-400">
               ID: #{project.id}

@@ -8,7 +8,16 @@ export interface LocalizedStringArray {
   en: string[];
 }
 
-export type CategoryType = 'all' | 'facades' | 'showers' | 'railings' | 'partitions' | 'mirrors' | 'tempered';
+export type CategoryType = 'all' | 'malls' | 'retail' | 'villas' | 'apartments';
+
+export type ServiceId =
+  | 'facades'
+  | 'handrails'
+  | 'mirrors'
+  | 'pergolas'
+  | 'decorative-mirrors'
+  | 'showers'
+  | 'accessories';
 
 export interface ProjectSpec {
   label: LocalizedString;
@@ -41,7 +50,7 @@ export interface ServiceSpec {
 }
 
 export interface Service {
-  id: CategoryType;
+  id: ServiceId | string;
   title: LocalizedString;
   subtitle: LocalizedString;
   shortDescription: LocalizedString;

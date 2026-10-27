@@ -73,12 +73,13 @@ export function ContactFormFields({ formData, setFormData, isAr, t }: ContactFor
             className={inputStyle}
           >
             <option value="">{t('selectService')}</option>
-            <option value="facades">{isAr ? 'الواجهات الزجاجية' : 'Glass Facades'}</option>
-            <option value="showers">{isAr ? 'كبائن الشاور' : 'Shower Cabins'}</option>
-            <option value="railings">{isAr ? 'الدربزينات الزجاجية' : 'Glass Railings'}</option>
-            <option value="partitions">{isAr ? 'الفواصل المكتبية' : 'Office Partitions'}</option>
-            <option value="mirrors">{isAr ? 'المرايا الديكورية' : 'Custom Mirrors'}</option>
-            <option value="elevator">{isAr ? 'تقفيل أسانسير' : 'Elevator Glass'}</option>
+            <option value="facades">{isAr ? 'واجهات زجاجية (محلات، مولات، أبواب)' : 'Glass Facades (Stores, Malls, Doors)'}</option>
+            <option value="handrails">{isAr ? 'هاندريل زجاجي' : 'Glass Handrails'}</option>
+            <option value="mirrors">{isAr ? 'مرايات' : 'Mirrors'}</option>
+            <option value="pergolas">{isAr ? 'برجولات زجاجية' : 'Glass Pergolas'}</option>
+            <option value="decorative-mirrors">{isAr ? 'مرايات ديكور' : 'Decorative Mirrors'}</option>
+            <option value="showers">{isAr ? 'كبائن شاور' : 'Shower Cabins'}</option>
+            <option value="accessories">{isAr ? 'إكسسوارات زجاج' : 'Glass Accessories & Hardware'}</option>
           </select>
         </div>
       </div>

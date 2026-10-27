@@ -20,11 +20,10 @@ export default function ProjectsPage({ params: { locale } }: { params: { locale:
 
   const categories: { id: CategoryType; label: string }[] = [
     { id: 'all', label: t('filterAll') },
-    { id: 'facades', label: t('filterFacades') },
-    { id: 'showers', label: t('filterShowers') },
-    { id: 'railings', label: t('filterRailings') },
-    { id: 'partitions', label: t('filterPartitions') },
-    { id: 'mirrors', label: t('filterMirrors') },
+    { id: 'malls', label: t('filterMalls') },
+    { id: 'retail', label: t('filterRetail') },
+    { id: 'villas', label: t('filterVillas') },
+    { id: 'apartments', label: t('filterApartments') },
   ];
 
   const filteredProjects = projectsData.filter((project) => {

@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Link } from '@/navigation';
 import { motion } from 'framer-motion';
-import { Building2, ShowerHead, ShieldCheck, LayoutGrid, Sparkles, Flame, CheckCircle2, ArrowRight, ArrowLeft } from 'lucide-react';
+import { Building2, ShowerHead, ShieldCheck, LayoutGrid, Sparkles, Flame, Sun, Palette, Wrench, CheckCircle2, ArrowRight, ArrowLeft } from 'lucide-react';
 import { Service } from '@/types';
 
 const iconMap: Record<string, any> = {
@@ -14,6 +14,9 @@ const iconMap: Record<string, any> = {
   LayoutGrid,
   Sparkles,
   Flame,
+  Sun,
+  Palette,
+  Wrench,
 };
 
 interface ServiceCardProps {

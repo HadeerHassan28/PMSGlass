@@ -1,8 +1,12 @@
 import { Service } from '../types';
-import { architecturalServices } from './services/architecturalServices';
-import { interiorServices } from './services/interiorServices';
+import { facadeAndHandrailServices } from './services/facadeAndHandrailServices';
+import { mirrorServices } from './services/mirrorServices';
+import { pergolaServices } from './services/pergolaServices';
+import { showerAndHardwareServices } from './services/showerAndHardwareServices';
 
 export const servicesData: Service[] = [
-  ...architecturalServices,
-  ...interiorServices,
+  ...facadeAndHandrailServices,
+  ...mirrorServices,
+  ...pergolaServices,
+  ...showerAndHardwareServices,
 ];
