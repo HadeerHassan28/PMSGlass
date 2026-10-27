@@ -13,12 +13,12 @@ export async function appendToSheetDB(data: ContactFormData) {
   const payload = {
     data: [
       {
-        Timestamp: timestamp,
-        Name: data.name,
-        Phone: data.phone,
-        Email: data.email || 'N/A',
-        Service: data.serviceNeeded || 'N/A',
-        Message: data.message || 'N/A',
+        'Timestamp (وقت الإرسال)': timestamp,
+        'Name (اسم العميل)': data.name,
+        'Phone (رقم الهاتف)': data.phone,
+        'Email (البريد الإلكتروني)': data.email || 'غير مسجل',
+        'Service (نوع الخدمة المطلوبة)': data.serviceNeeded || 'N/A',
+        'Message (تفاصيل الرسالة)': data.message || 'N/A',
       },
     ],
   };
