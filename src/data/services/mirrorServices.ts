@@ -20,11 +20,11 @@ export const mirrorServices: Service[] = [
       en: 'We supply and fabricate high-clarity copper-free and lead-free Belgian mirrors that prevent edge corrosion and moisture tarnishing. Available in large format dimensions with beveled or polished edges for luxury residences, commercial gymnasiums, and powder rooms.',
     },
     iconName: 'Sparkles',
-    mainImage: '/images/services/mirrors.svg',
+    mainImage:  '/images/services/mirror_watermarked/1.jpg',
     gallery: [
-      '/images/services/mirrors.svg',
-      '/images/projects/apartments-2.svg',
-      '/images/projects/villas-2.svg',
+      '/images/services/mirror_watermarked/2.jpg',
+      '/images/services/mirror_watermarked/3.jpg',
+      '/images/services/mirror_watermarked/4.jpg',
     ],
     features: {
       ar: [
@@ -84,11 +84,11 @@ export const mirrorServices: Service[] = [
       en: 'We craft bespoke decorative mirrors integrating tinted glass (bronze, smoke grey, gold, antique), laser-cut geometric patterns, and multi-faceted bevels. Equipped with dimmable ambient touch-sensor LEDs and anti-fog heating elements to serve as statement focal points in living rooms, foyers, and master bathrooms.',
     },
     iconName: 'Palette',
-    mainImage: '/images/services/decorative-mirrors.svg',
+    mainImage: '/images/services/decorMirror_watermarked/1.jpg',
     gallery: [
-      '/images/services/decorative-mirrors.svg',
-      '/images/projects/apartments-2.svg',
-      '/images/projects/villas-2.svg',
+       '/images/services/decorMirror_watermarked/2.jpg',
+       '/images/services/decorMirror_watermarked/3.jpg',
+       '/images/services/decorMirror_watermarked/4.jpg',
     ],
     features: {
       ar: [

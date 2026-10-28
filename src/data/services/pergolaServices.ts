@@ -20,11 +20,11 @@ export const pergolaServices: Service[] = [
       en: 'PMS GLASS engineers modern outdoor glass pergolas, patio canopies, and architectural skylights for villas, restaurants, and rooftop lounges. Using impact-resistant tempered laminated glass that blocks UV radiation and withstands harsh weather while providing natural daylight.',
     },
     iconName: 'Sun',
-    mainImage: '/images/services/pergolas.svg',
+    mainImage:  '/images/services/pergola_watermarked/1.jpg',
     gallery: [
-      '/images/services/pergolas.svg',
-      '/images/projects/villas-2.svg',
-      '/images/projects/malls-1.svg',
+      '/images/services/pergola_watermarked/2.jpg',
+      '/images/services/pergola_watermarked/3.jpg',
+      '/images/services/pergola_watermarked/4.jpg',
     ],
     features: {
       ar: [

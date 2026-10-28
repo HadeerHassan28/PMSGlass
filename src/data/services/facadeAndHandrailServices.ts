@@ -20,11 +20,11 @@ export const facadeAndHandrailServices: Service[] = [
       en: 'PMS GLASS delivers turnkey architectural glass facade solutions including curtain walls, frameless commercial storefronts, shopping center atriums, and heavy-duty glass entrance doors. Engineered with high-performance double glazing, Low-E thermal control, and tempered laminated safety glass for superior structural stability, soundproofing, and energy efficiency.',
     },
     iconName: 'Building2',
-    mainImage: '/images/services/facades.svg',
+    mainImage:  '/images/services/frontMall_watermarked/1.jpg',
     gallery: [
-      '/images/services/facades.svg',
-      '/images/projects/malls-1.svg',
-      '/images/projects/retail-1.svg',
+      '/images/services/frontMall_watermarked/2.jpg',
+      '/images/services/frontMall_watermarked/3.jpg',
+      '/images/services/frontMall_watermarked/4.jpg',
     ],
     features: {
       ar: [
@@ -84,11 +84,11 @@ export const facadeAndHandrailServices: Service[] = [
       en: 'We engineer bespoke structural glass balustrades and handrails for balconies, internal/external staircases, and pool enclosures. Utilizing premium laminated tempered glass (8+8mm or 10+10mm with PVB/SGP interlayers) mounted with embedded aluminum channels or marine-grade stainless steel fittings.',
     },
     iconName: 'ShieldCheck',
-    mainImage: '/images/services/handrails.svg',
+    mainImage: '/images/services/handrill_watermarked/1.jpg',
     gallery: [
-      '/images/services/handrails.svg',
-      '/images/projects/villas-1.svg',
-      '/images/projects/apartments-1.svg',
+     '/images/services/handrill_watermarked/2.jpg',
+     '/images/services/handrill_watermarked/3.jpg',
+      '/images/services/handrill_watermarked/4.jpg',
     ],
     features: {
       ar: [

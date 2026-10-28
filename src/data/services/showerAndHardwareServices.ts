@@ -20,11 +20,11 @@ export const showerAndHardwareServices: Service[] = [
       en: 'PMS GLASS manufactures custom luxury shower enclosures engineered with 10mm to 12mm thermally tempered safety glass and hydrophobic anti-limescale nano protection. Fitted with solid stainless steel hardware in matte black, brushed brass gold, rose gold, and polished mirror chrome.',
     },
     iconName: 'ShowerHead',
-    mainImage: '/images/services/showers.svg',
+    mainImage: '/images/services/shawar_watermarked/1.jpg',
     gallery: [
-      '/images/services/showers.svg',
-      '/images/projects/apartments-2.svg',
-      '/images/projects/villas-2.svg',
+      '/images/services/shawar_watermarked/2.jpg',
+      '/images/services/shawar_watermarked/3.jpg',
+      '/images/services/shawar_watermarked/4.jpg',
     ],
     features: {
       ar: [
@@ -82,11 +82,11 @@ export const showerAndHardwareServices: Service[] = [
       en: 'We provide a comprehensive catalog of premium architectural glass hardware crafted from solid stainless steel grades 304 & 316. Including certified hydraulic floor hinges, top/bottom patch fittings, luxury door pull handles, spider glass brackets, sliding rail kits, and shower clamps engineered for heavy-traffic durability and long-term corrosion resistance.',
     },
     iconName: 'Wrench',
-    mainImage: '/images/services/accessories.svg',
+    mainImage: '/images/services/accessories_watermarked/1.jpg',
     gallery: [
-      '/images/services/accessories.svg',
-      '/images/projects/retail-1.svg',
-      '/images/projects/malls-2.svg',
+       '/images/services/accessories_watermarked/2.jpg',
+       '/images/services/accessories_watermarked/3.jpg',
+      '/images/services/accessories_watermarked/4.jpg',
     ],
     features: {
       ar: [

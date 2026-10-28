@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Building2, ShowerHead, ShieldCheck, LayoutGrid, Sparkles, Flame, Sun, Palette, Wrench, CheckCircle2, SlidersHorizontal } from 'lucide-react';
 import { Service } from '@/types';
+import { ServiceGalleryPreview } from './ServiceGalleryPreview';
 
 const iconMap: Record<string, any> = {
   Building2,
@@ -109,13 +110,11 @@ export function ServiceDetailItem({ service, loc, isAr, t }: ServiceDetailItemPr
             />
           </div>
 
-          <div className="grid grid-cols-3 gap-2">
-            {service.gallery.map((img, gIdx) => (
-              <div key={gIdx} className="relative h-20 rounded-xl overflow-hidden border dark:border-white/10 border-slate-200">
-                <Image src={img} alt={`Gallery ${gIdx}`} fill className="object-cover" />
-              </div>
-            ))}
-          </div>
+          <ServiceGalleryPreview
+            service={service}
+            loc={loc}
+            isAr={isAr}
+          />
         </div>
       </div>
     </motion.div>
