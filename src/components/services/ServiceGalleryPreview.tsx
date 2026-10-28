@@ -89,3 +89,4 @@ export function ServiceGalleryPreview({ service, loc, isAr }: ServiceGalleryPrev
     </>
   );
 }
+

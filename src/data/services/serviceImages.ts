@@ -23,3 +23,4 @@ export function getServiceImages(serviceId: string, fallbackGallery?: string[]):
     `/images/services/${config.folder}/${i + 1}.jpg`
   );
 }
+
