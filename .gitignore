@@ -23,6 +23,15 @@ yarn-error.log*
 # vercel
 .vercel
 
+# system
+.DS_Store
+**/.DS_Store
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# python
+.venv/
+__pycache__/
+*.pyc

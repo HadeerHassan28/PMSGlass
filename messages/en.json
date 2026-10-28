@@ -30,7 +30,7 @@
   "About": {
     "badge": "Our Story & Engineering Excellence",
     "title": "Crafting the Future Through Transparency & Strength",
-    "description": "Since our establishment, PMS GLASS has been dedicated to pioneering architectural glass solutions, tempered safety glass, and structural aluminum systems with an unwavering focus on safety, insulation, and aesthetic perfection.",
+    "description": "Since our establishment, PMS GLASS has been dedicated to pioneering architectural glass solutions, tempered safety glass with an unwavering focus on safety, insulation, and aesthetic perfection.",
     "missionTitle": "Our Mission",
     "missionText": "Deliver integrated architectural glass solutions that exceed client expectations in durability, modern elegance, and pinpoint execution accuracy.",
     "visionTitle": "Our Vision",
@@ -60,7 +60,7 @@
   },
   "Services": {
     "badge": "Comprehensive Glass Solutions",
-    "title": "Architectural Glass & Aluminum Services",
+    "title": "Architectural Glass",
     "description": "We offer high-end architectural glass solutions custom-crafted for commercial malls, retail stores, luxury villas, and modern residential developments.",
     "viewDetails": "Specs & Details",
     "specsLabel": "Technical Specs",
@@ -127,7 +127,7 @@
     "hoursDesc": "Saturday - Thursday: 10:00 AM - 6:00 PM"
   },
   "Footer": {
-    "tagline": "PMS GLASS - Specialists in architectural glass, structural aluminum, and luxury facades.",
+    "tagline": "PMS GLASS - Specialists in architectural glass and luxury facades.",
     "quickLinks": "Quick Links",
     "servicesTitle": "Our Services",
     "contactInfo": "Contact Information",
