@@ -14,10 +14,10 @@ export function TechnicalSpecs({ title, description, isAr }: TechnicalSpecsProps
   const specs = [
     {
       icon: Flame,
-      title: isAr ? 'أفران المعالجة الحرارية للتسكير' : 'Convection Glass Tempering',
+      title: isAr ? "مدير العمليات والتركيبات" : 'Operations & Installations Manager',
       desc: isAr
-        ? 'قدرة معالجة لسمك يصل لـ 19 مم مع تحكم رقمي حراري دقيق لمقاومة صدمات تعادل ٥ أضعاف الزجاج العادي.'
-        : 'Digital convection tempering handling up to 19mm thickness with 5x higher impact resistance.',
+        ? "خبير في إدارة وتنفيذ مشاريع الزجاج المعماري الفاخر، والإشراف على أعلى معايير الجودة والدقة في تركيبات الواجهات والمرايات."
+        : "Expert in managing and executing high-end architectural glass projects, ensuring the highest standards of quality and precision in facades and mirrors installations.",
     },
     {
       icon: Layers,
