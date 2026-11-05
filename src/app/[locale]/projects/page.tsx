@@ -5,9 +5,9 @@ import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Filter, FolderKanban } from 'lucide-react';
 
-import { projectsData } from '@/data/projects';
+import { projectsData, projectCategoriesMap } from '@/data/projects';
 import { ProjectCard } from '@/components/ProjectCard';
-import { CategoryType } from '@/types';
+import { CategoryType, Project } from '@/types';
 import { ContactSection } from '@/components/ContactSection';
 
 export default function ProjectsPage({ params: { locale } }: { params: { locale: string } }) {
@@ -18,13 +18,24 @@ export default function ProjectsPage({ params: { locale } }: { params: { locale:
   const [selectedCategory, setSelectedCategory] = useState<CategoryType>('all');
   const [searchQuery, setSearchQuery] = useState('');
 
-  const categories: { id: CategoryType; label: string }[] = [
+  const categoryDataMap: Record<CategoryType, Project[]> = {
+    all: projectsData,
+    ...projectCategoriesMap,
+  };
+
+  const rawCategories: { id: CategoryType; label: string }[] = [
     { id: 'all', label: t('filterAll') },
     { id: 'malls', label: t('filterMalls') },
     { id: 'retail', label: t('filterRetail') },
     { id: 'villas', label: t('filterVillas') },
     { id: 'apartments', label: t('filterApartments') },
   ];
+
+  // Strict condition: if a category array is empty, nothing of it or its container is rendered
+  const categories = rawCategories.filter((cat) => {
+    const categoryData = categoryDataMap[cat.id];
+    return Boolean(categoryData && categoryData.length > 0);
+  });
 
   const filteredProjects = projectsData.filter((project) => {
     const matchesCategory = selectedCategory === 'all' || project.category === selectedCategory;
@@ -57,24 +68,28 @@ export default function ProjectsPage({ params: { locale } }: { params: { locale:
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           
           {/* Category Tabs */}
-          <div className="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 scrollbar-none">
-            {categories.map((cat) => {
-              const isSelected = selectedCategory === cat.id;
-              return (
-                <button
-                  key={cat.id}
-                  onClick={() => setSelectedCategory(cat.id)}
-                  className={`px-5 py-2.5 rounded-full text-xs font-bold transition-all duration-300 whitespace-nowrap ${
-                    isSelected
-                      ? 'bg-pms-gold text-black shadow-gold-glow'
-                      : 'border dark:border-white/10 border-slate-300 dark:bg-white/5 bg-slate-100 dark:text-gray-300 text-slate-700 hover:border-pms-gold'
-                  }`}
-                >
-                  {cat.label}
-                </button>
-              );
-            })}
-          </div>
+          {categories && categories.length > 0 && (
+            <div className="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 scrollbar-none">
+              {categories.map((cat) => {
+                const categoryData = categoryDataMap[cat.id];
+                if (!categoryData || categoryData.length === 0) return null;
+                const isSelected = selectedCategory === cat.id;
+                return (
+                  <button
+                    key={cat.id}
+                    onClick={() => setSelectedCategory(cat.id)}
+                    className={`px-5 py-2.5 rounded-full text-xs font-bold transition-all duration-300 whitespace-nowrap ${
+                      isSelected
+                        ? 'bg-pms-gold text-black shadow-gold-glow'
+                        : 'border dark:border-white/10 border-slate-300 dark:bg-white/5 bg-slate-100 dark:text-gray-300 text-slate-700 hover:border-pms-gold'
+                    }`}
+                  >
+                    {cat.label}
+                  </button>
+                );
+              })}
+            </div>
+          )}
 
           {/* Search Box */}
           <div className="relative w-full md:w-72">

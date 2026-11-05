@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronRight, ChevronLeft, Maximize2 } from 'lucide-react';
+import { BlurBackdropImage } from '@/components/ui/BlurBackdropImage';
 
 interface ProjectGalleryProps {
   images: string[];
@@ -51,14 +52,13 @@ export function ProjectGallery({ images, title }: ProjectGalleryProps) {
             onClick={() => openLightbox(idx)}
             className="group relative h-64 rounded-2xl overflow-hidden cursor-pointer border border-white/10 dark:border-white/10 border-slate-200 bg-slate-900 shadow-lg"
           >
-            <Image
+            <BlurBackdropImage
               src={img}
               alt={`${title} - Photo ${idx + 1}`}
-              fill
-              className="object-cover transition-transform duration-500 group-hover:scale-110"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="w-full h-full"
+              imgClassName="p-2 transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <div className="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
               <div className="p-3 rounded-full bg-pms-gold text-black shadow-glow flex items-center gap-2 font-bold text-sm">
                 <Maximize2 className="w-5 h-5" />
               </div>
@@ -121,11 +121,11 @@ export function ProjectGallery({ images, title }: ProjectGalleryProps) {
                 transition={{ duration: 0.3 }}
                 className="relative w-full h-full"
               >
-                <Image
+                <BlurBackdropImage
                   src={images[currentIndex]}
                   alt={`${title} - Enlarged image ${currentIndex + 1}`}
-                  fill
-                  className="object-contain"
+                  className="w-full h-full"
+                  imgClassName="p-2"
                   priority
                 />
               </motion.div>

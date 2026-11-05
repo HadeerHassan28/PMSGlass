@@ -277,6 +277,8 @@ def main():
     parser.add_argument("--overwrite", action="store_true", help="Overwrite images in place instead of creating _watermarked folders")
     parser.add_argument("--no-badge", action="store_true", help="Omit translucent card badge and apply direct watermark with stroke")
     parser.add_argument("--folder", help="Process only a specific service folder name")
+    parser.add_argument("--projects-only", action="store_true", help="Process only project images in public/images/projects")
+    parser.add_argument("--dir", help="Process a specific directory directly")
     args = parser.parse_args()
 
     print("==================================================")
@@ -290,6 +292,67 @@ def main():
     logo = Image.open(args.logo).convert("RGBA")
     print(f"✔ تم تحميل اللوجو بنجاح: {args.logo} (الحجم: {logo.size})")
     print(f"✔ رقم الهاتف: {args.phone}")
+
+    # Process specific directory directly
+    if args.dir:
+        target_dir = os.path.abspath(args.dir)
+        if not os.path.isdir(target_dir):
+            print(f"خطأ: المجلد غير موجود: {target_dir}", file=sys.stderr)
+            sys.exit(1)
+        folder_basename = os.path.basename(target_dir)
+        output_path = target_dir if args.overwrite else os.path.join(os.path.dirname(target_dir), f"{folder_basename}_watermarked")
+        succ, fail = process_service_folder(
+            folder_name=folder_basename,
+            input_dir=target_dir,
+            output_dir=output_path,
+            logo_img=logo,
+            phone_text=args.phone,
+            use_badge=not args.no_badge
+        )
+        print(f"\n✔ تم معالجة {succ} صورة، خطأ في {fail} صورة.")
+        return
+
+    # Process project images exclusively
+    if args.projects_only:
+        projects_dir = os.path.join(args.base_dir, "projects")
+        if not os.path.isdir(projects_dir):
+            print(f"خطأ: مجلد المشاريع غير موجود: {projects_dir}", file=sys.stderr)
+            sys.exit(1)
+
+        project_dirs = sorted([
+            os.path.join(projects_dir, d)
+            for d in os.listdir(projects_dir)
+            if os.path.isdir(os.path.join(projects_dir, d)) and not d.startswith(".")
+        ])
+
+        print(f"\n✔ تم العثور على {len(project_dirs)} مجلدات خاصة بالمشاريع فقط:")
+        for pd in project_dirs:
+            print(f"   - {os.path.basename(pd)} -> {pd}")
+
+        total_succ = 0
+        total_fail = 0
+        for pd in project_dirs:
+            folder_name = os.path.basename(pd)
+            output_path = pd if args.overwrite else os.path.join(os.path.dirname(pd), f"{folder_name}_watermarked")
+            succ, fail = process_service_folder(
+                folder_name=folder_name,
+                input_dir=pd,
+                output_dir=output_path,
+                logo_img=logo,
+                phone_text=args.phone,
+                use_badge=not args.no_badge
+            )
+            total_succ += succ
+            total_fail += fail
+
+        print("\n==================================================")
+        print("النتيجة النهائية لمعالجة صور المشاريع فقط:")
+        print(f"  ✔ الصور الناجحة: {total_succ}")
+        if total_fail > 0:
+            print(f"  ❌ الصور الفاشلة: {total_fail}")
+        print("تم الانتهاء بنجاح دون أي مساس بصور الخدمات!")
+        print("==================================================")
+        return
 
     # Resolve directories
     service_dirs = resolve_service_directories(args.base_dir)

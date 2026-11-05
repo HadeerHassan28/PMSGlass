@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { BlurBackdropImage } from '@/components/ui/BlurBackdropImage';
 import { Link } from '@/navigation';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, MapPin, Calendar } from 'lucide-react';
@@ -32,19 +33,18 @@ export function ProjectCard({ project, locale }: ProjectCardProps) {
       transition={{ duration: 0.4 }}
       className="group relative rounded-3xl overflow-hidden border dark:border-white/10 dark:bg-pms-card/80 border-slate-200 bg-white shadow-xl dark:shadow-glass-dark transition-all duration-300 flex flex-col justify-between"
     >
-      {/* Image Container */}
-      <div className="relative h-64 w-full overflow-hidden">
-        <Image
+      {/* Image Container with Luxury Blur Backdrop */}
+      <div className="relative h-64 w-full overflow-hidden bg-black/40">
+        <BlurBackdropImage
           src={project.mainImage}
           alt={project.title[locale]}
-          fill
-          className="object-cover transition-transform duration-700 group-hover:scale-110"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="w-full h-full"
+          imgClassName="p-3 transition-transform duration-700 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none z-10" />
 
         {/* Category Tag */}
-        <div className="absolute top-4 left-4 right-4 flex justify-between items-center">
+        <div className="absolute top-4 left-4 right-4 flex justify-between items-center z-20">
           <span className="px-3.5 py-1 rounded-full text-xs font-bold bg-pms-gold text-black shadow-md uppercase tracking-wider">
             {categoryLabel}
           </span>
