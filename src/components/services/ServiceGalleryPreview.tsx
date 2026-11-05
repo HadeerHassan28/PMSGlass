@@ -54,20 +54,31 @@ export function ServiceGalleryPreview({ service, loc, isAr }: ServiceGalleryPrev
               tabIndex={0}
               aria-label={`Open gallery image ${idx + 1}`}
             >
+              {/* blurred background */}
+              <div className="absolute inset-0">
+                <Image
+                  src={imgSrc}
+                  alt=""
+                  fill
+                  className="object-cover filter blur-xl opacity-40 scale-110"
+                  aria-hidden="true"
+                />
+              </div>
+              {/* foreground image */}
               <Image
                 src={imgSrc}
                 alt={`${service.title[loc]} - Thumbnail ${idx + 1}`}
                 fill
                 loading="lazy"
-                className="object-cover transition-transform duration-300 group-hover:scale-110"
+                className="object-contain p-1.5 relative z-10"
                 sizes="(max-width: 768px) 33vw, 20vw"
               />
 
               {/* 3rd Thumbnail: Dark Translucent Glassmorphism Overlay */}
               {isLastSlot && (
-                <div className="absolute inset-0 bg-black/75 backdrop-blur-[3px] border border-pms-gold/40 rounded-xl flex flex-col items-center justify-center p-1 text-center transition-colors group-hover:bg-black/65">
+                <div className="absolute inset-0 bg-black/75 backdrop-blur-[3px] border border-pms-gold/40 rounded-xl flex flex-col items-center justify-center p-1 text-center transition-colors group-hover:bg-black/65 z-10">
                   <Images className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-pms-gold mb-0.5 shrink-0" />
-                  <span className="text-white text-[11px] sm:text-xs font-bold tracking-tight">
+                  <span className="text-white text-[11px] sm:text-xs font-bold tracking-tight ">
                     {getRemainingLabel(remainingCount)}
                   </span>
                 </div>

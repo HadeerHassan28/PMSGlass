@@ -38,19 +38,39 @@ export function ServiceCard({ service, locale }: ServiceCardProps) {
       className="group relative rounded-3xl overflow-hidden border dark:border-white/10 dark:bg-pms-card/80 border-slate-200 bg-white shadow-xl flex flex-col justify-between"
     >
       <div>
-        {/* Service Image Banner */}
-        <div className="relative h-52 w-full overflow-hidden">
-          <Image
-            src={service.mainImage}
-            alt={service.title[locale]}
-            fill
-            className="object-cover transition-transform duration-700 group-hover:scale-110"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+        {/* Service Image Banner with Blur Backdrop */}
+        <div className="relative h-80 w-full overflow-hidden bg-black/40">
+          
+          {/* 1. الخلفية المطمسة (تملأ الفراغ وتدي عمق بصري فخم) */}
+          <div className="absolute inset-0 z-0">
+            <Image
+              src={service.mainImage}
+              alt=""
+              fill
+              className="object-cover filter blur-xl opacity-40 scale-110"
+              sizes="100vw"
+              aria-hidden="true"
+            />
+          </div>
+
+          {/* طبقة عتمة خفيفة للوضوح */}
+          <div className="absolute inset-0 bg-black/30 z-1" />
+
+          {/* 2. الصورة الأصلية الكاملة (object-contain) بدون قص */}
+          <div className="absolute inset-0 z-10 p-3">
+            <Image
+              src={service.mainImage}
+              alt={service.title[locale]}
+              fill
+              className="object-contain transition-transform duration-700 group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
+
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-20 pointer-events-none" />
           
           {/* Floating Icon */}
-          <div className="absolute top-4 right-4 p-3 rounded-2xl bg-pms-gold text-black shadow-lg">
+          <div className="absolute top-4 right-4 p-3 rounded-2xl bg-pms-gold text-black shadow-lg z-30">
             <IconComponent className="w-6 h-6" />
           </div>
         </div>
@@ -81,7 +101,8 @@ export function ServiceCard({ service, locale }: ServiceCardProps) {
       <div className="p-6 pt-0">
         <Link
           href="/services"
-className="w-full py-3 px-4 rounded-xl border border-pms-gold/40 text-pms-gold dark:bg-white/5 bg-slate-50 hover:bg-pms-gold hover:text-slate-900 dark:hover:text-white font-bold text-xs transition-all duration-300 flex items-center justify-center gap-2 group/btn shadow-sm"        >
+          className="w-full py-3 px-4 rounded-xl border border-pms-gold/40 text-pms-gold dark:bg-white/5 bg-slate-50 hover:bg-pms-gold hover:text-slate-900 dark:hover:text-white font-bold text-xs transition-all duration-300 flex items-center justify-center gap-2 group/btn shadow-sm"
+        >
           <span>{isAr ? 'عرض المواصفات كاملة' : 'View Full Specifications'}</span>
           {isAr ? (
             <ArrowLeft className="w-4 h-4 transition-transform group-hover/btn:-translate-x-1" />

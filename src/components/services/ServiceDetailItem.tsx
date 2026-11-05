@@ -100,16 +100,31 @@ export function ServiceDetailItem({ service, loc, isAr, t }: ServiceDetailItemPr
           </div>
         </div>
 
+        {/* القسم الأيمن: الصورة الرئيسية بمعرض الخلفية المطمسة + المعرض المصغر */}
         <div className="lg:col-span-5 space-y-4">
-          <div className="relative h-64 sm:h-80 rounded-2xl overflow-hidden border dark:border-white/10 border-slate-200">
-            <Image
-              src={service.mainImage}
-              alt={service.title[loc]}
-              fill
-              className="object-cover"
-            />
-          </div>
+          
+          {/* الصورة الرئيسية بتصميم Blur Backdrop */}
+          <div className="relative h-64 sm:h-80 rounded-2xl overflow-hidden border dark:border-white/10 border-slate-200 bg-black/40 flex items-center justify-center">
+  {/* blurred background */}
+  <Image
+    src={service.mainImage}
+    alt=""
+    fill
+    className="absolute inset-0 object-cover filter blur-xl opacity-40 scale-110"
+    aria-hidden="true"
+    sizes="(max-width: 1024px) 100vw, 40vw"
+  />
+  {/* foreground image */}
+  <Image
+    src={service.mainImage}
+    alt={service.title[loc]}
+    fill
+    className="object-contain p-3 relative z-10"
+    sizes="(max-width: 1024px) 100vw, 40vw"
+  />
+</div>
 
+          {/* الصور الثلاثة السفلية (ServiceGalleryPreview) - السلايدر يعمل تماماً بدونه مساس */}
           <ServiceGalleryPreview
             service={service}
             loc={loc}
