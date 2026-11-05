@@ -12,11 +12,11 @@ export const mirrorServices: Service[] = [
       en: 'High-purity Belgian silvered mirrors for residential & commercial spaces',
     },
     shortDescription: {
-      ar: 'توريد وتركيب أحدث أنواع المرايا البلجيكية الفاخرة المقاومة للرطوبة والصدأ بمقاسات كبيرة مخصصة وتفصيل دقيق.',
+      ar: 'توريد وتركيب أحدث أنواع المرايا جريش الفاخرة المقاومة للرطوبة والصدأ بمقاسات كبيرة مخصصة وتفصيل دقيق.',
       en: 'Supply and installation of premium Belgian copper-free silvered mirrors custom-sized for bathrooms, gyms, and wall claddings.',
     },
     fullDescription: {
-      ar: 'نصنع ونركب المرايا البلجيكية عالية النقاء الخالية من النحاس والرصاص (Copper-Free) المقاومة لبقع الرطوبة والاسوداد، وتناسب الجدران العملاقة وغرف الملابس والمغاسل والأندية الرياضية مع شطف أطراف دقيق بالليزر.',
+      ar: 'نصنع ونركب المرايا جريش عالية النقاء الخالية من النحاس والرصاص (Copper-Free) المقاومة لبقع الرطوبة والاسوداد، وتناسب الجدران العملاقة وغرف الملابس والمغاسل والأندية الرياضية مع شطف أطراف دقيق بالليزر.',
       en: 'We supply and fabricate high-clarity copper-free and lead-free Belgian mirrors that prevent edge corrosion and moisture tarnishing. Available in large format dimensions with beveled or polished edges for luxury residences, commercial gymnasiums, and powder rooms.',
     },
     iconName: 'Sparkles',
@@ -28,7 +28,7 @@ export const mirrorServices: Service[] = [
     ],
     features: {
       ar: [
-        'مرايا بلجيكية أصلية خالية من النحاس والرصاص 100%',
+        'مرايا جريش أصلية خالية من النحاس والرصاص 100%',
         'مقاومة تامة لبقع الرطوبة والاسوداد على الأطراف',
         'قص وشطف ليزر بأعلى دقة متناهية وأشكال مخصصة',
         'سماكات متعددة تبدأ من 4 مم حتى 8 مم',
