@@ -5,8 +5,8 @@ export const mallsProjects: Project[] = [
     id: 'm1',
     slug: 'commercial-malls-glass-facades',
     title: {
-      ar: 'واجهات وزجاج المولات والمجمعات التجارية',
-      en: 'Commercial Shopping Mall Glass Facades & Skylights',
+      ar: 'مول المصري الاقمشة',
+      en: "The Egyptian Fabric Mall",
     },
     subtitle: {
       ar: 'واجهات زجاجية كرتن وول وسكاي لايت بانورامي بمواصفات عزل حراري قياسية',
@@ -18,8 +18,8 @@ export const mallsProjects: Project[] = [
       en: 'Commercial Centers & Malls Development Group',
     },
     location: {
-      ar: 'القاهرة الجديدة، مصر',
-      en: 'New Cairo, Egypt',
+      ar: 'جسر اللسويس - القاهرة',
+      en: 'Gesr El Suez - Cairo',
     },
     year: '2025',
     area: '3,850 m²',
@@ -80,10 +80,10 @@ export const mallsProjects: Project[] = [
       en: 'Mokattam Commercial Project',
     },
     location: {
-      ar: 'المقطم، القاهرة، مصر',
-      en: 'El Mokattam, Cairo, Egypt',
+      ar: 'المقطم، القاهرة',
+      en: 'El Mokattam, Cairo',
     },
-    year: '2025',
+    year: '2026',
     area: '2,400 m²',
     glassType: {
       ar: 'زجاج سيكوريت مصفح عالي الجودة معالج حرارياً',
