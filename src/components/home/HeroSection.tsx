@@ -1,11 +1,12 @@
 'use client';
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect, useMemo } from 'react';
+import Image from 'next/image';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from '@/navigation';
 import { ArrowLeft, ArrowRight, Layers } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import { HeroGlowBackground } from './HeroGlowBackground';
+import { projectsData } from '@/data/projects';
 
 interface HeroSectionProps {
   isAr: boolean;
@@ -14,12 +15,59 @@ interface HeroSectionProps {
 export function HeroSection({ isAr }: HeroSectionProps) {
   const t = useTranslations('Hero');
 
+  // Dynamically extract real project images from projects data
+  const heroImages = useMemo(() => {
+    const list: string[] = [];
+    projectsData.forEach((project) => {
+      if (project.mainImage) list.push(project.mainImage);
+      if (project.galleryImages && project.galleryImages.length > 0) {
+        list.push(...project.galleryImages.slice(0, 3));
+      }
+    });
+    return list.length > 0 ? list : ['/images/projects/clothMall/1.jpg', '/images/projects/mokatem/1.jpg'];
+  }, []);
+
+  const [currentIdx, setCurrentIdx] = useState(0);
+
+  // Automated background slideshow cycling every 5 seconds
+  useEffect(() => {
+    if (heroImages.length <= 1) return;
+    const timer = setInterval(() => {
+      setCurrentIdx((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [heroImages.length]);
+
   return (
     <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-black pt-12">
-      {/* Animated Luxury Glow Orbs Background */}
-      <HeroGlowBackground />
+      {/* Dynamic Project Images Background with Smooth Crossfade */}
+      <div className="absolute inset-0 z-0 overflow-hidden bg-black">
+        <AnimatePresence mode="sync">
+          <motion.div
+            key={currentIdx}
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.8, ease: 'easeInOut' }}
+            className="absolute inset-0 w-full h-full"
+          >
+            <Image
+              src={heroImages[currentIdx]}
+              alt="PMS Glass Project Architectural Showcase"
+              fill
+              priority={currentIdx === 0}
+              className="absolute inset-0 w-full h-full object-cover z-0"
+              sizes="100vw"
+            />
+          </motion.div>
+        </AnimatePresence>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8 py-16">
+        {/* Luxury Gradient & Readability Overlay */}
+        <div className="absolute inset-0 bg-pms-black/70 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black z-10" />
+      </div>
+
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8 py-16">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
