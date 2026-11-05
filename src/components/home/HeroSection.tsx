@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { Link } from '@/navigation';
 import { ArrowLeft, ArrowRight, Layers } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { HeroGlowBackground } from './HeroGlowBackground';
 
 interface HeroSectionProps {
   isAr: boolean;
@@ -16,55 +17,7 @@ export function HeroSection({ isAr }: HeroSectionProps) {
   return (
     <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-black pt-12">
       {/* Animated Luxury Glow Orbs Background */}
-      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-        {/* Soft Golden Glowing Orb */}
-        <motion.div
-          animate={{
-            x: [0, 45, -35, 0],
-            y: [0, -40, 30, 0],
-            scale: [1, 1.15, 0.95, 1],
-          }}
-          transition={{
-            duration: 18,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-          className="absolute -top-24 left-[10%] w-96 h-96 sm:w-[540px] sm:h-[540px] bg-[#F5B800]/15 filter blur-[120px] rounded-full"
-        />
-
-        {/* Deep Dark-Blue / Architectural Ambient Light Layer */}
-        <motion.div
-          animate={{
-            x: [0, -50, 40, 0],
-            y: [0, 45, -35, 0],
-            scale: [1, 0.9, 1.12, 1],
-          }}
-          transition={{
-            duration: 22,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-          className="absolute -bottom-28 right-[8%] w-[380px] h-[380px] sm:w-[580px] sm:h-[580px] bg-[#0c1829]/60 filter blur-[130px] rounded-full"
-        />
-
-        {/* Subtle Central Warm Amber Glow */}
-        <motion.div
-          animate={{
-            opacity: [0.25, 0.45, 0.25],
-            scale: [0.95, 1.08, 0.95],
-          }}
-          transition={{
-            duration: 14,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-          className="absolute top-1/3 left-1/2 -translate-x-1/2 w-80 h-80 sm:w-[460px] sm:h-[460px] bg-amber-500/10 filter blur-[110px] rounded-full"
-        />
-
-        {/* Architectural Backdrop Blur & Dark Gradient Layer for Contrast */}
-        <div className="absolute inset-0 backdrop-blur-3xl" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/80 to-black" />
-      </div>
+      <HeroGlowBackground />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8 py-16">
         <motion.div
